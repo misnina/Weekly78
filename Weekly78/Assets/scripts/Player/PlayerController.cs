@@ -6,22 +6,30 @@ public class PlayerController : MonoBehaviour
 {
     public int speed = 5;
     public bool isGrounded;
-    public int jumpPower = 250;
+    public int jumpPower = 350;
+    public bool canMove = true;
 
     private float moveX;
 
     private Rigidbody2D rb;
     private SpriteRenderer sp;
 
+    public static PlayerController instance;
+
     private void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        Move();
+        if(canMove)
+        {
+            Move();
+        }
+        
     }
 
     private void Move()
