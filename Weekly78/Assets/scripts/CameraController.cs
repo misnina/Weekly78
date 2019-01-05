@@ -6,15 +6,10 @@ public class CameraController : MonoBehaviour
 {
 
     private Transform target;
-
-    void Start()
-    {
-        target = GameObject.Find("Player").transform;
-    }
-
    
     void Update()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
     }
 }

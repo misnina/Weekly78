@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public int speed = 5;
-    public bool isGrounded;
+    public bool isGrounded = true;
     public int jumpPower = 350;
     public bool canMove = true;
 
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         //CONTROLS
         moveX = Input.GetAxis("Horizontal");
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && isGrounded)
         {
             Jump();
         }
@@ -62,6 +62,22 @@ public class PlayerController : MonoBehaviour
     {
         //JUMPING CODE
         rb.AddForce(Vector2.up * jumpPower);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
+        }
     }
 
 }
