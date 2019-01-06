@@ -9,6 +9,7 @@ public class PlayerInteractions : MonoBehaviour
     public GameObject bigPlayer;
 
     private bool gflower;
+    private bool sflower;
 
     private void Start()
     {
@@ -19,9 +20,14 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (gflower)
+            if (gflower && smallPlayer.activeInHierarchy)
             {
                 Grow();
+            }
+
+            if (sflower && bigPlayer.activeInHierarchy)
+            {
+                Shrink();
             }
         }
     }
@@ -32,6 +38,11 @@ public class PlayerInteractions : MonoBehaviour
         {
             gflower = true;
         }
+
+        if(other.gameObject.tag == "ShrinkFlower")
+        {
+            sflower = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -39,6 +50,11 @@ public class PlayerInteractions : MonoBehaviour
         if (other.gameObject.tag == "GrowthFlower")
         {
             gflower = false;
+        }
+
+        if (other.gameObject.tag == "ShrinkFlower")
+        {
+            sflower = false;
         }
     }
 
@@ -48,7 +64,17 @@ public class PlayerInteractions : MonoBehaviour
         smallPlayer.SetActive(false);
         bigPlayer.transform.position = pos;
         bigPlayer.SetActive(true);
+        gflower = false;
 
+    }
+
+    private void Shrink()
+    {
+        Vector3 pos = bigPlayer.transform.position;
+        bigPlayer.SetActive(false);
+        smallPlayer.transform.position = pos;
+        smallPlayer.SetActive(true);
+        sflower = false;
     }
 
 

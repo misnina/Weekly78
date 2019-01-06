@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BetterJump : MonoBehaviour
 {
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultipler = 2f;
+    public float fallMultiplier = 2f;
+    public float lowJumpMultipler = 2.5f;
 
     private Rigidbody2D rb;
 
