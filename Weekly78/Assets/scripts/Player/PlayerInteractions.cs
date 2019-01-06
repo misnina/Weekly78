@@ -19,10 +19,8 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("E pressed");
             if (gflower)
             {
-                Debug.Log("Run growth");
                 Grow();
             }
         }
@@ -30,10 +28,8 @@ public class PlayerInteractions : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Entered Trigger");
         if (other.gameObject.tag == "GrowthFlower")
         {
-            Debug.Log("GrowthFlower triggered");
             gflower = true;
         }
     }

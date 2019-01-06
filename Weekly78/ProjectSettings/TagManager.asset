@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - ShrinkFlower
+  - GrowthFlower
+  - Wall
   layers:
   - Default
   - TransparentFX
