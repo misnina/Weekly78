@@ -27,25 +27,28 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(canMove)
         {
             Move();
         }
+
+        HandleLayers();
         
     }
 
     private void Move()
     {
         //CONTROLS
+        //ANIMATIONS
         moveX = Input.GetAxis("Horizontal");
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
+            anim.SetTrigger("jump");
             Jump();
         }
 
-        //ANIMATIONS
         if (rb.velocity.x > 1f || rb.velocity.x < -1f)
         {
             anim.SetFloat("moveX", 1);
@@ -53,6 +56,16 @@ public class PlayerController : MonoBehaviour
         else
         {
             anim.SetFloat("moveX", 0);
+        }
+
+        if (isGrounded)
+        {
+            anim.SetBool("land", false);
+        }
+
+        if (rb.velocity.y < 0)
+        {
+            anim.SetBool("land", true);
         }
 
 
@@ -89,6 +102,17 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Ground")
         {
             isGrounded = false;
+        }
+    }
+
+    private void HandleLayers()
+    {
+        if (!isGrounded)
+        {
+            anim.SetLayerWeight(1, 1);
+        } else
+        {
+            anim.SetLayerWeight(1, 0);
         }
     }
 
