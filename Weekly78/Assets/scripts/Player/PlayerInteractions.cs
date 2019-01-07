@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
-
     public GameObject smallPlayer;
     public GameObject bigPlayer;
+    public GameObject largePlayer;
 
     private bool gflower;
     private bool sflower;
@@ -20,12 +20,12 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (gflower && smallPlayer.activeInHierarchy)
+            if (gflower)
             {
                 Grow();
             }
 
-            if (sflower && bigPlayer.activeInHierarchy)
+            if (sflower)
             {
                 Shrink();
             }
@@ -60,21 +60,48 @@ public class PlayerInteractions : MonoBehaviour
 
     private void Grow()
     {
-        Vector3 pos = smallPlayer.transform.position;
-        smallPlayer.SetActive(false);
-        bigPlayer.transform.position = pos;
-        bigPlayer.SetActive(true);
-        gflower = false;
+        if(smallPlayer.activeInHierarchy)
+        {
+            Vector3 pos = smallPlayer.transform.position;
+            smallPlayer.SetActive(false);
+            bigPlayer.transform.position = pos;
+            bigPlayer.SetActive(true);
+            gflower = false;
+        } else if (bigPlayer.activeInHierarchy)
+        {
+            Vector3 pos = bigPlayer.transform.position;
+            bigPlayer.SetActive(false);
+            largePlayer.transform.position = pos;
+            largePlayer.SetActive(true);
+            gflower = false;
+        } else
+        {
+            //Do Nothing
+        }
 
     }
 
     private void Shrink()
     {
-        Vector3 pos = bigPlayer.transform.position;
-        bigPlayer.SetActive(false);
-        smallPlayer.transform.position = pos;
-        smallPlayer.SetActive(true);
-        sflower = false;
+        if (bigPlayer.activeInHierarchy)
+        {
+            Vector3 pos = bigPlayer.transform.position;
+            bigPlayer.SetActive(false);
+            smallPlayer.transform.position = pos;
+            smallPlayer.SetActive(true);
+            sflower = false;
+        } else if (largePlayer.activeInHierarchy)
+        {
+            Vector3 pos =largePlayer.transform.position;
+            largePlayer.SetActive(false);
+            bigPlayer.transform.position = pos;
+            bigPlayer.SetActive(true);
+            sflower = false;
+        } else
+        {
+            //Do Nothing
+        }
+     
     }
 
 
