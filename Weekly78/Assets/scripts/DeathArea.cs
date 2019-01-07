@@ -6,7 +6,7 @@ public class DeathArea : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.tag == "Player")
         {
             PlayerRespawn.instance.died = true;
         }

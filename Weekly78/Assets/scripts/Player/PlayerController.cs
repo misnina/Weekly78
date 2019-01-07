@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
 
     private float moveX;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private SpriteRenderer sr;
-    private Animator anim;
+    public Animator anim;
 
     public static PlayerController instance;
 

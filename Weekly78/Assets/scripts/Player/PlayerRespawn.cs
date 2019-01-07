@@ -20,6 +20,8 @@ public class PlayerRespawn : MonoBehaviour
         if (died)
         {
             PlayerController.instance.canMove = false;
+            PlayerController.instance.rb.velocity = Vector2.zero;
+            //PlayerController.instance.anim.SetTrigger("death");
             StartCoroutine("Respawn");
             died = false;
         }
@@ -28,7 +30,7 @@ public class PlayerRespawn : MonoBehaviour
     IEnumerator Respawn()
     {
         Debug.Log("Player has died");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         PlayerController.instance.canMove = true;
 
