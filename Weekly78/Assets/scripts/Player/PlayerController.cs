@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(moveX * speed, rb.velocity.y);
     }
 
-    private void Jump()
+    public void Jump()
     {
         rb.velocity = Vector2.up * jumpPower;
     }
