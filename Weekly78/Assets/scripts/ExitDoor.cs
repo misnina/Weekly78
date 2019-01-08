@@ -24,4 +24,12 @@ public class ExitDoor : MonoBehaviour
             playerTrigger = true;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            playerTrigger = false;
+        }
+    }
 }
