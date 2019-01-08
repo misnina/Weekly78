@@ -9,6 +9,7 @@ TextureImporter:
     21300008: objects_4
     21300010: objects_5
     21300012: objects_6
+    21300014: objects_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -138,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1d694d2969b8bc4dbe49ba9ad34cd1b
+      spriteID: acf9f9bb0057526469d3201f12caf284
       vertices: []
       indices: 
       edges: []
@@ -158,7 +159,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 053325e3d25e23541bae0d0bb4696060
+      spriteID: d450973c02aff3e44b085842bc2e64f2
       vertices: []
       indices: 
       edges: []
@@ -178,7 +179,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccfe1d540f2cbb846bb4119b7fef9598
+      spriteID: c10d238d6e1084a4896d7ae0f0753bf0
       vertices: []
       indices: 
       edges: []
@@ -198,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb566711d5a6804d86c466f91b89fe9
+      spriteID: cee9273e85de91c41aa3faa21e73fd94
       vertices: []
       indices: 
       edges: []
@@ -218,7 +219,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bff9cf5c05bd2874790fa773e9556171
+      spriteID: 89b40948bec16aa4d9a34115e0301523
       vertices: []
       indices: 
       edges: []
@@ -238,7 +239,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1625b849aa4e1814b9c4d34b46c8d8a6
+      spriteID: ab26651966381d548b76775aa637345c
       vertices: []
       indices: 
       edges: []
@@ -258,7 +259,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ae4793d3c1158342b43bfa7449aba31
+      spriteID: d62a5c7f7e52dce46b7726f1a8c30d1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objects_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b9a4d4a0099a7478da0773b18e9932
       vertices: []
       indices: 
       edges: []
