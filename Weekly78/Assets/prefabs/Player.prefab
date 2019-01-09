@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3fa600d576c5d4fa4f7358aab05eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   isGrounded: 1
   jumpPower: 5
   canMove: 1
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3fa600d576c5d4fa4f7358aab05eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   isGrounded: 1
   jumpPower: 10
   canMove: 1
@@ -536,8 +536,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02983141, y: 0}
-  m_Size: {x: 0.62575245, y: 1}
+  m_Offset: {x: -0.01052165, y: 0}
+  m_Size: {x: 0.34787416, y: 1}
   m_Direction: 0
 --- !u!50 &1465246675188695208
 Rigidbody2D:
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3fa600d576c5d4fa4f7358aab05eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   isGrounded: 1
   jumpPower: 10
   canMove: 1
