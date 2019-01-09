@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public int speed = 5;
     public bool isGrounded = true;
-    [Range(1, 10)]
+    [Range(1, 15)]
     public int jumpPower = 1;
     public bool canMove = true;
 
