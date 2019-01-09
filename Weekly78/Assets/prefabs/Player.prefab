@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3fa600d576c5d4fa4f7358aab05eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 2
   isGrounded: 1
   jumpPower: 5
   canMove: 1
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3fa600d576c5d4fa4f7358aab05eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   isGrounded: 1
   jumpPower: 10
   canMove: 1
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3fa600d576c5d4fa4f7358aab05eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   isGrounded: 1
   jumpPower: 10
   canMove: 1
