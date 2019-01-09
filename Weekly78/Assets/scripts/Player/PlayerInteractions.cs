@@ -62,6 +62,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         if(smallPlayer.activeInHierarchy)
         {
+            AudioManager.instance.PlaySound("flower");
             Vector3 pos = smallPlayer.transform.position;
             smallPlayer.SetActive(false);
             bigPlayer.transform.position = pos;
@@ -69,6 +70,7 @@ public class PlayerInteractions : MonoBehaviour
             gflower = false;
         } else if (bigPlayer.activeInHierarchy)
         {
+            AudioManager.instance.PlaySound("flower");
             Vector3 pos = bigPlayer.transform.position;
             bigPlayer.SetActive(false);
             largePlayer.transform.position = pos;
@@ -85,6 +87,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (bigPlayer.activeInHierarchy)
         {
+            AudioManager.instance.PlaySound("flower");
             Vector3 pos = bigPlayer.transform.position;
             bigPlayer.SetActive(false);
             smallPlayer.transform.position = pos;
@@ -92,6 +95,7 @@ public class PlayerInteractions : MonoBehaviour
             sflower = false;
         } else if (largePlayer.activeInHierarchy)
         {
+            AudioManager.instance.PlaySound("flower");
             Vector3 pos =largePlayer.transform.position;
             largePlayer.SetActive(false);
             bigPlayer.transform.position = pos;

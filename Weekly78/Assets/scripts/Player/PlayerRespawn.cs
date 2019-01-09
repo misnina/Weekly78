@@ -19,6 +19,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (died)
         {
+            AudioManager.instance.PlaySound("death");
             PlayerController.instance.canMove = false;
             PlayerController.instance.rb.velocity = Vector2.zero;
             //PlayerController.instance.anim.SetTrigger("death");

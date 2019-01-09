@@ -8,6 +8,7 @@ public class KillArea : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            AudioManager.instance.PlaySound("kill");
             Destroy(this.transform.parent.gameObject);
             PlayerController.instance.Jump();
         }

@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         moveX = Input.GetAxis("Horizontal");
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
+            AudioManager.instance.PlaySound("jump");
             anim.SetTrigger("jump");
             Jump();
         }
