@@ -15,6 +15,8 @@ public class CursorSelect : MonoBehaviour
     private bool creditsTrigger;
     private bool backTrigger;
 
+    public string levelToLoad;
+
 
     private void Update()
     {
@@ -22,7 +24,7 @@ public class CursorSelect : MonoBehaviour
         {
             if(playTrigger)
             {
-                SceneManager.LoadScene("viktor01");
+                SceneManager.LoadScene(levelToLoad);
                 //Replace for level 1
             }
             else if (controlsTrigger)

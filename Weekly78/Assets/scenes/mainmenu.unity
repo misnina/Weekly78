@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 173249884}
   endPos: {fileID: 6749575}
+  levelToLoad: 
 --- !u!61 &104763921
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -745,6 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 1175110956}
   endPos: {fileID: 2147300114}
+  levelToLoad: 
 --- !u!61 &572740481
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1963,6 +1965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 2078262463}
   endPos: {fileID: 390690806}
+  levelToLoad: nina01
 --- !u!61 &1589761692
 BoxCollider2D:
   m_ObjectHideFlags: 0
