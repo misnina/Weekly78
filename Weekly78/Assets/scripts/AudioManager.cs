@@ -29,10 +29,20 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     Sound[] sounds;
 
+
+    public AudioClip startBG;
+    public AudioClip gameBG;
+
     private void Start()
     {
-        instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        } else
+        {
+            Destroy(this.gameObject);
+        }
 
         for (int i = 0; i < sounds.Length; i++)
         {

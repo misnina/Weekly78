@@ -22,7 +22,7 @@ public class CursorSelect : MonoBehaviour
         {
             if(playTrigger)
             {
-                SceneManager.LoadScene("test");
+                SceneManager.LoadScene("viktor01");
                 //Replace for level 1
             }
             else if (controlsTrigger)

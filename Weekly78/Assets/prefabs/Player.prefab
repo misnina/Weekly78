@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   isGrounded: 1
-  jumpPower: 5
+  jumpPower: 8
   canMove: 1
   rb: {fileID: 0}
   anim: {fileID: 0}
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   isGrounded: 1
-  jumpPower: 10
+  jumpPower: 9
   canMove: 1
   rb: {fileID: 0}
   anim: {fileID: 0}
