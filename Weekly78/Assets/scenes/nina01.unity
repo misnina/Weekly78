@@ -183,7 +183,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 36eae60e4f3bf3242b4462c2302cd43d, type: 3}
+      objectReference: {fileID: 8300000, guid: cec2e070f78e0eb48b12287d3c77bc52, type: 3}
+    - target: {fileID: 7920791976141333748, guid: 853563237bed43f41b43336b4aff9f73,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 853563237bed43f41b43336b4aff9f73, type: 3}
 --- !u!1001 &521639426
@@ -273,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5059e496e0fe4dd46ad8e969d87e5ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {fileID: 8300000, guid: 8483994b9de1f0f46a1b65e0e87c531a, type: 3}
 --- !u!1001 &537142115
 PrefabInstance:
   m_ObjectHideFlags: 0

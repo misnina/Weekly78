@@ -7,8 +7,15 @@ public class BackgroundMusic : MonoBehaviour
 
     public static BackgroundMusic instance;
 
+    public AudioClip start;
+    private AudioSource audioS;
+
+    private bool started;
+
     void Start()
     {
+        audioS = GetComponent<AudioSource>();
+
         if (instance == null)
         {
             instance = this;
@@ -21,4 +28,19 @@ public class BackgroundMusic : MonoBehaviour
        
     }
 
+    private void Update()
+    {
+        if (!started)
+        {
+            audioS.PlayOneShot(start);
+            started = true;
+            Invoke("PlayLoop", 2.2f);
+        }
+        
+    }
+
+    private void PlayLoop()
+    {
+        audioS.Play();
+    }
 }
